@@ -1,6 +1,6 @@
 
-name: 'Check Existing Tag Action'
-description: 'Call GH API and check if action input tag is present as a valid tag in current repo'
+name: 'Check Existing Tag'
+description: This action returns a validation if specifying tag already exists in repository
 inputs:
   tag:
     description: 'Tag'
