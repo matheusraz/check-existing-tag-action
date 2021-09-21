@@ -1,0 +1,18 @@
+on: push
+jobs:
+  action_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Check Existing Tag
+        uses: ./
+        id: check_tag
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag: v1.0.0
+
+      - name: Tag Existing Result
+        run: echo "${{ steps.check_tag.outputs.tag_exists }}"
