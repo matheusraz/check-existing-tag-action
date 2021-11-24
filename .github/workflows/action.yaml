@@ -12,7 +12,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag: v1.0.0
+          tag: v1
 
       - name: Tag Existing Result
         run: echo "${{ steps.check_tag.outputs.tag_exists }}"
